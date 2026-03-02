@@ -17,6 +17,7 @@ A university project implementing a **Multi-Layer Perceptron (MLP) from scratch*
    - [Effect of Hidden Layer Size on Accuracy & Training Time](#effect-of-hidden-layer-size-on-accuracy--training-time)
    - [Correct vs. Incorrect Classifications](#correct-vs-incorrect-classifications)
 6. [Comparison & Discussion](#6-comparison--discussion)
+7. [How to run](#7-how--to--run)
 
 ---
 
@@ -182,6 +183,10 @@ The table below compares different hidden-layer configurations (single hidden la
 
 - The MLP still achieves only ~55% accuracy because the raw pixel space is a weak representation for natural images. Modern CNNs exploit spatial structure (via convolutions) and typically achieve >90% on CIFAR-10.
 - No data augmentation or regularization (e.g., dropout, L2) was applied, leaving the model susceptible to overfitting on larger architectures.
+
+## 7. How to run
+
+By clicking run all, the script runs serially.
 
 
 ---
