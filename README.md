@@ -17,8 +17,6 @@ A university project implementing a **Multi-Layer Perceptron (MLP) from scratch*
    - [Effect of Hidden Layer Size on Accuracy & Training Time](#effect-of-hidden-layer-size-on-accuracy--training-time)
    - [Correct vs. Incorrect Classifications](#correct-vs-incorrect-classifications)
 6. [Comparison & Discussion](#6-comparison--discussion)
-7. [How to Run](#7-how-to-run)
-8. [Requirements](#8-requirements)
 
 ---
 
@@ -185,75 +183,9 @@ The table below compares different hidden-layer configurations (single hidden la
 - The MLP still achieves only ~55% accuracy because the raw pixel space is a weak representation for natural images. Modern CNNs exploit spatial structure (via convolutions) and typically achieve >90% on CIFAR-10.
 - No data augmentation or regularization (e.g., dropout, L2) was applied, leaving the model susceptible to overfitting on larger architectures.
 
----
-
-## 7. How to Run
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/Vasileios-Koudounis/Building-an-MLP-from-scratch.git
-cd Building-an-MLP-from-scratch
-```
-
-### 2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Download CIFAR-10
-
-Download the Python version of CIFAR-10 from the [official website](https://www.cs.toronto.edu/~kriz/cifar.html) and extract it into a `data/` directory:
-
-```
-data/
-└── cifar-10-batches-py/
-    ├── data_batch_1
-    ├── data_batch_2
-    ├── data_batch_3
-    ├── data_batch_4
-    ├── data_batch_5
-    └── test_batch
-```
-
-### 4. Train and evaluate the MLP
-
-```bash
-python mlp.py
-```
-
-### 5. Run baseline classifiers
-
-```bash
-python baselines.py
-```
-
-### Expected output
-
-```
-Training MLP...
-Epoch [10/50]  Loss: 1.8423  Train Acc: 38.24%
-...
-Epoch [50/50]  Loss: 1.3156  Train Acc: 57.81%
-
-Test Accuracy (MLP):  55.12%
-Test Accuracy (1-NN): 36.10%
-Test Accuracy (3-NN): 33.40%
-Test Accuracy (NCC):  28.20%
-```
 
 ---
 
-## 8. Requirements
 
-| Package | Version |
-|---|---|
-| Python | ≥ 3.8 |
-| NumPy | ≥ 1.21 |
-| Matplotlib | ≥ 3.4 (for visualizations) |
-| scikit-learn | ≥ 1.0 (for baseline classifiers) |
-
----
 
 *This project was completed as part of a university Neural Networks course.*
